@@ -1,0 +1,12 @@
+from pyopenms import*
+seq="VAKA"
+massfull=0
+for i in range (0,len(seq)):
+    q=seq[i]
+    a=AASequence.fromString(q)
+    massfull=massfull+a.getMonoWeight()
+    print(massfull)
+sequence=AASequence.fromString(seq)
+print("sequence:",sequence)
+massfull=sequence.getMonoWeight()
+print("Monoisotopic mass of peptide[M] is",massfull)
